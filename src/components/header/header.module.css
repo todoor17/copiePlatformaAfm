@@ -1,0 +1,80 @@
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 12vh;
+  width: 70vw;
+  gap: 3vw;
+}
+
+.logo {
+  width: 40%;
+}
+
+.left,
+.right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 25%;
+  gap: 1vw;
+  padding: 1vw;
+  box-sizing: content-box;
+}
+
+.right {
+  justify-content: space-between;
+  width: 75%;
+  padding: 0;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 70%;
+  gap: 5px;
+}
+
+.text {
+  color: #004a91;
+  font-weight: bold;
+}
+
+.text1 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.accountContainer {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.accountPic {
+  height: 50%;
+}
+
+.button {
+  color: white;
+  background-color: #004a91;
+  height: 30%;
+  width: 30%;
+  border-radius: 8px;
+  border: 0;
+}
+
+.button:hover {
+  background-color: gray;
+}

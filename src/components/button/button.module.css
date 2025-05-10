@@ -1,0 +1,12 @@
+.button {
+  height: 5vh;
+  width: 16vw;
+  color: white;
+  font-weight: bold;
+  margin: 0;
+  border: 2px solid black;
+}
+
+.button:hover {
+  background-color: blueviolet;
+}

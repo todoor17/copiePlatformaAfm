@@ -1,0 +1,24 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(228, 231, 237);
+}
+
+.headerContainer,
+.contentContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  width: 100%;
+}
+
+.contentContainer {
+  gap: 5vw;
+  height: 80vh;
+  width: 100vw;
+}

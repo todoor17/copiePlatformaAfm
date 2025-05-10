@@ -1,0 +1,72 @@
+/* upload.module.css */
+.container {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  font-family: Inter, sans-serif;
+  width: 97%;
+}
+
+.info {
+  display: flex;
+  align-items: flex-start;
+}
+
+.statusIcon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.container.error .title {
+  color: #e74c3c;
+}
+
+.container.success .title {
+  color: #27ae60;
+}
+
+.description {
+  font-size: 14px;
+  color: #555;
+}
+
+.uploadButton,
+.uploadedButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.uploadButton {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+.uploadedButton {
+  background-color: #27ae60;
+  color: #fff;
+}
+
+/* Hide the native file input */
+.uploadButton input,
+.uploadedButton input {
+  display: none;
+}
