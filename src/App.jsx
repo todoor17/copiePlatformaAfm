@@ -13,20 +13,34 @@ import Counter from "./components/counter/Counter.jsx";
 import { useEffect } from "react";
 
 export default function App() {
+  // Get the base URL from the import.meta.env
+  const basePath = import.meta.env.BASE_URL || "/copiePlatformaAfm/";
+
   // Effect to handle page reload
   useEffect(() => {
-    // Check if current path is not one of our valid routes
+    // Check if current path is not one of our valid routes after considering the base path
     const currentPath = window.location.pathname;
-    if (!["/1", "/2", "/3"].includes(currentPath)) {
-      // Redirect to /1 on reload
-      window.history.replaceState(null, document.title, "/1");
+    const validPaths = [
+      `${basePath}`,
+      `${basePath}1`,
+      `${basePath}2`,
+      `${basePath}3`,
+    ];
+
+    const isValidPath = validPaths.some(
+      (path) => currentPath === path || currentPath === path + "/"
+    );
+
+    if (!isValidPath) {
+      // Redirect to the first page
+      window.history.replaceState(null, document.title, `${basePath}1`);
     }
-  }, []);
+  }, [basePath]);
 
   return (
     <FileProvider>
       <TimerProvider>
-        <Router>
+        <Router basename={basePath}>
           {/* Counter component that persists across all pages */}
           <Counter />
 
